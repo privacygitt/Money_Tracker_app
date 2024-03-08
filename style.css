@@ -60,7 +60,7 @@ button {
 }
 
 button:hover {
-    background-color: #212529; /* Darker grey */
+    background-color: #212529;
 }
 
 .expenses-list {
@@ -76,20 +76,19 @@ table {
 }
 
 th, td {
-    border-bottom: 1px solid #dee2e6; /* Light grey */
+    border-bottom: 1px solid #dee2e6; 
     padding: 10px 0;
     text-align: left;
 }
 
 th {
-    color: #343a40; /* Dark grey */
+    color: #343a40;
 }
 
 tfoot {
     font-weight: bold;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
     input[type="number"],
     input[type="date"],
