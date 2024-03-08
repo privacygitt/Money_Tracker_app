@@ -1,4 +1,4 @@
-// JavaScript (script.js)
+
 
 document.addEventListener('DOMContentLoaded', function() {
     const addBtn = document.getElementById('add-btn');
@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let expenses = [];
 
-    // Function to render expenses
     function renderExpenses() {
         expensesTableBody.innerHTML = '';
         let total = 0;
@@ -41,8 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         totalAmount.textContent = total.toFixed(2);
     }
-
-    // Function to add new expense
     function addExpense() {
         const categorySelect = document.getElementById('category-select');
         const amountInput = document.getElementById('amount-input');
@@ -61,8 +58,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
             expenses.push(expense);
             renderExpenses();
-
-            // Clear input fields
             categorySelect.value = '';
             amountInput.value = '';
             dateInput.value = '';
@@ -71,12 +66,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Function to delete an expense
     function deleteExpense(index) {
         expenses.splice(index, 1);
         renderExpenses();
     }
-
-    // Event listener for add button
     addBtn.addEventListener('click', addExpense);
 });
