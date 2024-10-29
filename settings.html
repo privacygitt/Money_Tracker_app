@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Settings - Money Tracker</title>
+</head>
+<body>
+    <div class="container">
+        <button id="toggle-button" class="toggle-btn">☰</button>
+        <div class="sidebar">
+            <br>
+            <br>
+            <h2>Menu</h2>
+            <a href="index.html">Dashboard</a>
+            <a href="view-expenses.html">View Expenses</a>
+            <a href="settings.html">Settings</a>
+            <a href="help.html">Help</a>
+        </div>
+        <div class="main-content">
+            <h1>Settings</h1>
+            <div class="settings-section">
+                <h2>Currency</h2>
+                <label for="currency-select">Select Currency:</label>
+                <select id="currency-select">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="INR">INR</option>
+                </select>
+            </div>
+            <div class="settings-section">
+                <h2>Theme</h2>
+                <label for="theme-select">Select Theme:</label>
+                <select id="theme-select">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                </select>
+            </div>
+            <div class="settings-section">
+                <h2>Notifications</h2>
+                <label>
+                    <input type="checkbox" id="notification-checkbox">
+                    Enable Bill Payment Reminders
+                </label>
+            </div>
+            <div class="settings-section">
+                <h2>Export Data</h2>
+                <button id="export-btn">Export as CSV</button>
+            </div>
+        </div>
+    </div>
+    <script src="settings.js"></script>
+</body>
+</html>
+

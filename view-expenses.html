@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>View Expenses - Money Tracker</title>
+</head>
+<body>
+    <div class="container">
+        <button id="toggle-button" class="toggle-btn">☰</button>
+        <div class="sidebar">
+            <br>
+            <br>
+            <h2>Menu</h2>
+            <a href="index.html">Dashboard</a>
+            <a href="view-expenses.html">View Expenses</a>
+            <a href="settings.html">Settings</a>
+            <a href="help.html">Help</a>
+        </div>
+        <div class="main-content">
+            <h1>View Expenses</h1>
+            <div class="filter-section">
+                <label for="start-date">Start Date:</label>
+                <input type="date" id="start-date">
+                <label for="end-date">End Date:</label>
+                <input type="date" id="end-date">
+                <button id="filter-btn">Filter</button>
+            </div>
+            <div class="search-section">
+                <label for="search-input">Search Expenses:</label>
+                <input type="text" id="search-input" placeholder="Search by category or amount">
+                <button id="search-btn">Search</button>
+            </div>
+            <div class="expenses-list">
+                <h2>Expenses List</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="expenses-table-body"></tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Total:</td>
+                            <td id="total-amount">0.00</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="view-expenses.js"></script>
+</body>
+</html>

@@ -4,45 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Money Tracker Web App</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Money Tracker</title>
 </head>
 <body>
-    <h1>Money Tracker Web App</h1>
-    <div class="input-section">
-        <label for="category-select">Category</label>
-        <select id="category-select">
-            <option value="Exam Fee">Exam Fee</option>
-            <option value="Transport">Transport</option>
-            <option value="Food">Food</option>
-            <option value="Hostel Fee">Hostel Fee</option>
-            <option value="Shopping">Shopping</option>
-            <option value="College Fee">College Fee</option>
-        </select>
-        <label for="amount-input">Amount:</label>
-        <input type="number" id="amount-input">&nbsp;&nbsp;&nbsp;
-        <label for="date-input">Date:</label>
-        <input type="date" id="date-input">
-        <button id="add-btn">ADD</button>
-    </div>
-    <div class="expenses-list">
-        <h2>Expenses List</h2>
-        <table>
-            <thead>
-              
-                    <th>Category</th>
-                    <th>Amount</th>
-                    <th>Date
-                    </th>
-                    <th>Delete</th>
-            </thead>
-            <tbody id="expenses-table-body"></tbody>
-            <tfoot>
-                <td>
-                    Total:
-                </td>
-                <td id="total-amount"></td>
-            </tfoot>
-        </table>
+    <div class="container">
+        <button id="toggle-button" class="toggle-btn">☰</button>
+        <div class="sidebar">
+            <br>
+            <br>
+            <h2>Menu</h2>
+            <a href="index.html">Dashboard</a>
+            <a href="view-expenses.html">View Expenses</a>
+            <a href="settings.html">Settings</a>
+            <a href="help.html">Help</a>
+        </div>
+        <div class="main-content">
+            <h1>Money Tracker</h1>
+            <div class="income-section">
+                <h2>Add Income</h2>
+                <input type="number" id="income-input" placeholder="Enter income" required>
+                <button id="add-income-btn">Add Income</button>
+            </div>
+            <div class="input-section">
+                <label class="label" for="category-select">Category</label>
+                <div class="category-wrapper">
+                    <select id="category-select">
+                        <option value="">select</option>
+                        <option value="Food">Food</option>
+                        <option value="Transport">Transport</option>
+                        <option value="Shopping">Shopping</option>
+                        <option value="Hostel Fee">Hostel Fee</option>
+                        <option value="College Fee">College Fee</option>
+                    </select>
+                    <input type="text" id="custom-category-input" placeholder="Or enter custom category">
+                </div>
+                
+                <label class="label" for="amount-input">Amount</label>
+                <input type="number" id="amount-input" placeholder="Enter amount">
+                
+                <label class="label" for="date-input">Date</label>
+                <input type="date" id="date-input">
+                
+                <button id="add-btn">ADD</button>
+            </div>
+            
+            
+            <div class="summary-section">
+                <h2>Summary</h2>
+                <p>Total Expenses: <span id="total-expenses">0.00</span></p>
+                <p>Net Balance: <span id="net-balance">0.00</span></p>
+            </div>
+            <div class="chart-section">
+                <canvas id="expenseChart" width="400" height="200"></canvas>
+            </div>
+            <div class="expenses-list">
+                <h2>Expenses List</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="expenses-table-body"></tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Total:</td>
+                            <td id="total-amount">0.00</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
